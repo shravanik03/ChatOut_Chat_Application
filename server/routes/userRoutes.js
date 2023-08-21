@@ -4,7 +4,7 @@ const router = require('express').Router();
 const multer = require('multer');
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-        cb(null, '../frontend/chat-app/src/userPics/');
+        cb(null, '../frontend/src/userPics/');
     },
     filename: function (req, file, cb) {
         const uniqueSuffix = Date.now() + '_' + file.originalname;
